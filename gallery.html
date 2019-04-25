@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDlycuKRSg_s_hwCSFfWwWFTr4yBFcoPvc",
+        authDomain: "databasetest-23ff0.firebaseapp.com",
+        databaseURL: "https://databasetest-23ff0.firebaseio.com",
+        projectId: "databasetest-23ff0",
+        storageBucket: "databasetest-23ff0.appspot.com",
+        messagingSenderId: "498203589663"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <div id="app"></div>
+
+    <template id="businessTemp">
+      <article>
+        <h1 class="business_name"></h1>
+        <div class="business_desc"></div>
+        <div class="bagdes_list">
+          <ul></ul>
+        </div>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="600"
+              height="500"
+              id="gmap_canvas"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            >Google Maps Generator by
+            <a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+          </div>
+        </div>
+        <footer>
+          <button class="vote">VOTE</button>
+        </footer>
+      </article>
+    </template>
+
+    <script src="gallery.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDlycuKRSg_s_hwCSFfWwWFTr4yBFcoPvc",
+        authDomain: "databasetest-23ff0.firebaseapp.com",
+        databaseURL: "https://databasetest-23ff0.firebaseio.com",
+        projectId: "databasetest-23ff0",
+        storageBucket: "databasetest-23ff0.appspot.com",
+        messagingSenderId: "498203589663"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <form action="">
+      <select id="category_form">
+        <option value="EAT">EAT</option>
+        <option value="SHOP">SHOP</option>
+        <option value="STAY">STAY</option>
+        <option value="TRAVEL">TRAVEL</option>
+        <option value="DISCOVER">DISCOVER</option>
+        <option value="PARTY">PARTY</option>
+        <option value="CHILL">CHILL</option>
+      </select>
+      <label>
+        Name:
+        <input type="text" name="name" id="form_name" />
+      </label>
+      <label>
+        Description:
+        <textarea name="" cols="30" rows="10" id="form_desc"></textarea>
+      </label>
+
+      <label>Map src: <input id="locationSrc" type="text"/></label>
+
+      <input type="submit" value="To Database" />
+    </form>
+
+    <div id="catMenu"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

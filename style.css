@@ -1,0 +1,19 @@
+form lable {
+  display: block;
+}
+#catMenu a {
+  display: block;
+  padding: 20px;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+
+  width: 90%;
+}
+.gmap_canvas {
+  position: absolute;
+  /* overflow: hidden; */
+  background: none !important;
+  width: 100%;
+}
