@@ -56,8 +56,8 @@ const Business = {
 
 function init() {
   buildBusinessList();
-  console.log(listOfBusinesses);
-  showListBusiness();
+  //console.log(listOfBusinesses);
+  //showListBusiness();
 }
 
 init();
@@ -75,26 +75,27 @@ function buildBusinessList() {
     business.badges = data.badges;
     business.createBadges(data.badges);
 
-    listOfBusinesses.push(business);
+    //listOfBusinesses.push(business);
+    showListBusiness(business);
   });
 }
 
-function showListBusiness() {
-  console.log(listOfBusinesses);
+function showListBusiness(business) {
+  //console.log(listOfBusinesses);
   console.log("hello");
-  listOfBusinesses.forEach(business => {
-    console.log("here no");
-    let clone = document.querySelector("template").content.cloneNode(true);
-    clone.querySelector("#business_name").textContent = business.name;
-    clone.querySelector("#business_desc").textContent = business.description;
-    clone.querySelector("#gmap_canvas").src = business.location;
-    let badgesList = clone.querySelector(".badges_list");
-    business.filters.forEach(filter => {
-      let li = document.createElement("li");
-      li.textContent = filter;
-      console.log(li);
-      badgesList.appendChild(li);
-    });
-    gallery.appendChild(clone);
+  //listOfBusinesses.forEach(business => {
+  console.log("here no");
+  let clone = document.querySelector("template").content.cloneNode(true);
+  clone.querySelector(".business_name").textContent = business.name;
+  clone.querySelector(".business_desc").textContent = business.description;
+  clone.querySelector(".gmap_canvas").src = business.location;
+  let badgesList = clone.querySelector(".badges_list");
+  business.filters.forEach(filter => {
+    let li = document.createElement("li");
+    li.textContent = filter;
+    console.log(li);
+    badgesList.appendChild(li);
   });
+  gallery.appendChild(clone);
+  //});
 }
